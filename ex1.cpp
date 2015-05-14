@@ -7,6 +7,11 @@
 	vittorio.romeo@outlook.com
 */
 
+// The files used in this talk are available at:
+/*
+	https://github.com/SuperV1234/cppnow2015
+*/
+
 #include <iostream>
 
 template<typename TF, typename... Ts>
