@@ -16,7 +16,7 @@ void forArgs(TF&& mFn, Ts&&... mArgs)
 	return (void) std::initializer_list<int>
 	{
 		(
-			std::forward<TF>(mFn)(std::forward<Ts>(mArgs)),
+			mFn(std::forward<Ts>(mArgs)),
 			0
 		)...
 	};
@@ -76,7 +76,7 @@ void forTuple(TFn&& mFn, TTpl&& mTpl)
 		{
 			forArgs
 			(
-				std::forward<TFn>(mFn),
+				mFn,
 				std::forward<decltype(xs)>(xs)...
 			);
 		},

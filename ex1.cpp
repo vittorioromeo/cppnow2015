@@ -33,7 +33,7 @@ void forArgs(TF&& mFn, Ts&&... mArgs)
 			// evaluates to an (unused) integer, which is
 			// accepted by the `initializer_list`.
 
-			std::forward<TF>(mFn)
+			mFn
 			(
 				std::forward<Ts>(mArgs)
 			),
