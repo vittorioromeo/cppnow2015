@@ -18,7 +18,8 @@ template<typename, typename> struct forNArgsImpl;
 template<std::size_t N, typename TF, typename... Ts>
 void forNArgs(TF mFn, Ts... mXs)
 {
-	static_assert(sizeof...(Ts) % N == 0, "Wrong number of arguments");
+	static_assert(sizeof...(Ts) % N == 0, 
+		"Wrong number of arguments");
 
 	forNArgsImpl
 	<

@@ -32,7 +32,8 @@ template<std::size_t N, typename TF, typename... Ts>
 void forNArgs(TF mFn, Ts... mXs)
 {
 	// Check if the number of passed arguments is divisible by `N`.
-	static_assert(sizeof...(Ts) % N == 0, "Wrong number of arguments");
+	static_assert(sizeof...(Ts) % N == 0, 
+		"Wrong number of arguments");
 
 	// Call the implementation function with...
 	forNArgsImpl
